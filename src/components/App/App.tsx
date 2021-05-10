@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NewIdeaForm from '../NewIdeaForm/NewIdeaForm'
+import React, {useState} from 'react';
+import NewIdeaForm from '../NewIdeaForm/NewIdeaForm';
 
-function App() {
+
+const App = () => {
+  const [ideas, setIdeas] = useState([]);
+
   return (
     <div className="App">
       <NewIdeaForm/>
-      Yeehaw
     </div>
   );
 }
