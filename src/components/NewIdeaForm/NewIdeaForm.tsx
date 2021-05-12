@@ -1,18 +1,27 @@
 import React, {useState} from 'react';
 
-type FormState = {
-  title: string,
-  description: string
+type FormProps = {
+  addIdea: any;
+  ideas: any;
 }
 
-const NewIdeaForm = () => {
-  const [description, setDescription] = useState('');
-  const [title, setTitle] = useState('');
+const NewIdeaForm = ({addIdea, ideas}: FormProps) => {
+  const [description, setDescription] = useState<string>('');
+  const [title, setTitle] = useState<string>('');
 
-  const clearInputs = (event: React.SyntheticEvent) => {
-    event.preventDefault();
+  const clearInputs = () => {
     setDescription('');
     setTitle('');
+  }
+
+  const submitIdea = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    const newIdea = {
+      title: title,
+      description: description
+    }
+    clearInputs();
+    addIdea([...ideas, newIdea]);
   }
 
   return (
@@ -37,7 +46,7 @@ const NewIdeaForm = () => {
           onChange={event => setDescription(event.target.value)}
         />
       </div>
-      <button className='submit-idea' onClick={clearInputs}>Submit</button>
+      <button className='submit-idea' onClick={submitIdea}>Submit</button>
     </form>
   )
 }
