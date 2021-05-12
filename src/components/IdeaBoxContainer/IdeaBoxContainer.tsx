@@ -1,13 +1,21 @@
 import React from 'react';
 
 type Props = {
-  ideas: any;
-}
+  ideas: {
+    title: string;
+    description: string;
+  }[]
+};
+
+type Idea = {
+  title: string;
+  description: string;
+};
 
 const IdeaBoxContainer = ({ideas}: Props) => {
 
   const createIdeaBoxes = () =>
-    ideas.map((idea:any) => {
+    ideas.map((idea:Idea) => {
       return (
         <>
           <p>{idea.title}</p>
