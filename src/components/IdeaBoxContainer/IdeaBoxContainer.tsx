@@ -1,4 +1,5 @@
 import React from 'react';
+import IdeaBox from '../IdeaBox/IdeaBox';
 
 type Props = {
   ideas: {
@@ -17,10 +18,7 @@ const IdeaBoxContainer = ({ideas}: Props) => {
   const createIdeaBoxes = () =>
     ideas.map((idea:Idea) => {
       return (
-        <>
-          <p>{idea.title}</p>
-          <p>{idea.description}</p>
-        </>
+        < IdeaBox idea={idea} key={ideas.length}/>
       )
     })
 
