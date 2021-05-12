@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import NewIdeaForm from '../NewIdeaForm/NewIdeaForm';
 
 
-const App = () => {
-  const [ideas, setIdeas] = useState([]);
+const App: React.FC = () => {
+  const [ideas, setIdeas] = useState<Array<any>>([]);
 
   return (
     <div className="App">
-      <NewIdeaForm/>
+      <NewIdeaForm addIdea={setIdeas} ideas={ideas}/>
     </div>
   );
 }

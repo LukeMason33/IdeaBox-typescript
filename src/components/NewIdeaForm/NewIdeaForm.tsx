@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
 
 type FormState = {
-  title: string,
-  description: string
+  title: string;
+  description: string;
 }
 
-const NewIdeaForm = () => {
+type FormProps = {
+  addIdea: any;
+  ideas: any;
+}
+
+const NewIdeaForm = ({addIdea, ideas}: FormProps) => {
   const [description, setDescription] = useState('');
   const [title, setTitle] = useState('');
 
