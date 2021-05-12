@@ -7,9 +7,12 @@ type Props = {
   }
 };
 
-const IdeaBox = () => {
+const IdeaBox = ({idea}: Props) => {
   return (
-    <p>idea</p>
+    <article className='idea-box'>
+      <h2 className='idea-box-title'>{idea.title}</h2>
+      <p className='idea-box-description'>{idea.description}</p>
+    </article>
   )
 }
 
