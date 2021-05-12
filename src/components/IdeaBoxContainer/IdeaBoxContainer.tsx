@@ -1,4 +1,5 @@
 import React from 'react';
+import IdeaBox from '../IdeaBox/IdeaBox';
 
 type Props = {
   ideas: {
