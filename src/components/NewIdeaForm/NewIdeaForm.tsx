@@ -46,7 +46,7 @@ const NewIdeaForm = ({addIdea, ideas}: FormProps) => {
           onChange={event => setDescription(event.target.value)}
         />
       </div>
-      <button className='submit-idea' onClick={submitIdea}>Submit</button>
+      <button className='submit-idea' onClick={submitIdea} >Submit</button>
     </form>
   )
 }
