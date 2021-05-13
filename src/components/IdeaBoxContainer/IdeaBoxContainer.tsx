@@ -5,7 +5,8 @@ type Props = {
   ideas: {
     title: string;
     description: string;
-  }[]
+  }[];
+  deleteIdea: any;
 };
 
 type Idea = {
@@ -13,12 +14,16 @@ type Idea = {
   description: string;
 };
 
-const IdeaBoxContainer = ({ideas}: Props) => {
+const IdeaBoxContainer = ({ideas, deleteIdea}: Props) => {
 
   const createIdeaBoxes = () =>
     ideas.map((idea:Idea) => {
       return (
-        < IdeaBox idea={idea} key={ideas.length}/>
+        < IdeaBox
+          idea={idea}
+          key={ideas.indexOf(idea)}
+          deleteIdea={deleteIdea}
+        />
       )
     })
 
