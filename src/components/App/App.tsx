@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import NewIdeaForm from '../NewIdeaForm/NewIdeaForm';
 import IdeaBoxContainer from '../IdeaBoxContainer/IdeaBoxContainer';
+import Header from '../Header/Header';
 
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      < Header />
       < NewIdeaForm addIdea={setIdeas} ideas={ideas} />
       < IdeaBoxContainer ideas={ideas} deleteIdea={removeIdea}/>
     </div>
