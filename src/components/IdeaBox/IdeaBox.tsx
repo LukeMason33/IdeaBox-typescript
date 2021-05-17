@@ -1,4 +1,5 @@
 import React from 'react';
+import './IdeaBox.css';
 
 type Props = {
   idea: {
@@ -16,9 +17,13 @@ const IdeaBox = ({idea, deleteIdea}: Props) => {
 
   return (
     <article className='idea-box'>
-      <h2 className='idea-box-title'>{idea.title}</h2>
+      <div className='idea-title-container'>
+        <h3 className='idea-box-title'>{idea.title}</h3>
+      </div>
       <p className='idea-box-description'>{idea.description}</p>
-      <button className='delete-btn' onClick={deleteIdeaBox}>Delete Idea</button>
+      <div className='idea-button-container'>
+        <button className='delete-btn' onClick={deleteIdeaBox}>Delete Idea</button>
+      </div>
     </article>
   )
 }
