@@ -1,0 +1,7 @@
+.app-header {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: center;
+  background-color: #779ecb;
+}

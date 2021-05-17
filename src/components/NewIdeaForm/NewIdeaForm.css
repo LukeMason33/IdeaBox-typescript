@@ -1,0 +1,41 @@
+.text-line {
+  height: 1px;
+  background-color: black;
+  text-align: center;
+  margin-top: 6vh;
+}
+
+.section-title {
+  background-color: #f7f3ed;
+  position: relative;
+  top: -0.55em;
+}
+
+.idea-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  width: 40vw;
+  margin-top: 4vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-idea {
+  width: 13vh;
+  background-color: #779ecb;
+  border: none;
+  border-radius: 5px;
+  height: 4vh;
+}

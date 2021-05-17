@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import NewIdeaForm from '../NewIdeaForm/NewIdeaForm';
 import IdeaBoxContainer from '../IdeaBoxContainer/IdeaBoxContainer';
 import Header from '../Header/Header';
+import './App.css';
 
 
 const App: React.FC = () => {
