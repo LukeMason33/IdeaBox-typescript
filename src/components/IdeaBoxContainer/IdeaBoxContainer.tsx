@@ -1,5 +1,6 @@
 import React from 'react';
 import IdeaBox from '../IdeaBox/IdeaBox';
+import './IdeaBoxContainer.css';
 
 type Props = {
   ideas: {
@@ -28,9 +29,14 @@ const IdeaBoxContainer = ({ideas, deleteIdea}: Props) => {
     })
 
   return (
-    <>
-      {createIdeaBoxes()}
-    </>
+    <section className='ideas'>
+      <div className='text-line'>
+        <h2><span className='section-title'>My Ideas</span></h2>
+      </div>
+      <div className='my-ideas-container'>
+        {createIdeaBoxes()}
+      </div>
+    </section>
   )
 }
 

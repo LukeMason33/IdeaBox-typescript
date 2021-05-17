@@ -28,7 +28,7 @@ const NewIdeaForm = ({addIdea, ideas}: FormProps) => {
   return (
     <>
       <div className='text-line'>
-        <h2><span className='form-title'>Create an Idea</span></h2>
+        <h2><span className='section-title'>Create an Idea</span></h2>
       </div>
       <section className='form'>
         <form className='idea-form'>
